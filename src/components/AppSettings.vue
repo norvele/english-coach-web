@@ -22,17 +22,17 @@ const languageOptions = computed(() =>
   )
 );
 
-const changeTaskLanguage = (value: Language) => {
+const changeTaskLanguage = (value: string) => {
   emit("change", {
     ...props.settings,
-    taskLanguage: value,
+    taskLanguage: value as Language,
   });
 };
 
-const changeSolutionLanguage = (value: Language) => {
+const changeSolutionLanguage = (value: string) => {
   emit("change", {
     ...props.settings,
-    solutionLanguage: value,
+    solutionLanguage: value as Language,
   });
 };
 </script>

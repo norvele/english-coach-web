@@ -11,7 +11,7 @@ const toggle = () => {
   isOpened.value = !isOpened.value;
 };
 const clickListener = (event: Event) => {
-  if (!root.value?.contains(event.target)) {
+  if (!root.value?.contains(event.target as HTMLElement)) {
     close();
   }
 };

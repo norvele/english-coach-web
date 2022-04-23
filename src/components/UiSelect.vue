@@ -10,8 +10,8 @@ const emit = defineEmits({
   "update:model-value": (value: string) => true,
 });
 
-const onChange = (event: InputEvent) => {
-  emit("update:model-value", event.target?.value || "");
+const onChange = (event: Event) => {
+  emit("update:model-value", (event.target as HTMLInputElement)?.value || "");
 };
 </script>
 
