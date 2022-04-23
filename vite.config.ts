@@ -5,6 +5,7 @@ import vue from "@vitejs/plugin-vue";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
+  base: "/english-coach-web/",
   build: {
     outDir: "docs",
   },
