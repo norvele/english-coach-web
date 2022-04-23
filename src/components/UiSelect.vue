@@ -1,0 +1,31 @@
+<script setup lang="ts">
+import { SelectOption } from "../types";
+
+defineProps<{
+  modelValue: string;
+  options: SelectOption[];
+}>();
+
+const emit = defineEmits({
+  "update:model-value": (value: string) => true,
+});
+
+const onChange = (event: InputEvent) => {
+  emit("update:model-value", event.target?.value || "");
+};
+</script>
+
+<template>
+  <select :value="modelValue" @change="onChange" class="ui-select">
+    <option v-for="option in options" :key="option.value" :value="option.value">
+      {{ option.label }}
+    </option>
+  </select>
+</template>
+
+<style scoped>
+.ui-select {
+  padding: 5px;
+  font-size: 24px;
+}
+</style>
