@@ -2,8 +2,9 @@
 import UiButton from "./UiButton.vue";
 import UiDropdown from "./UiDropdown.vue";
 import AppSettings from "./AppSettings.vue";
-import { useGame, Settings } from "../composition/useGame";
+import { useGame } from "../composition/useGame";
 import { ref } from "vue";
+import { Settings } from "../common";
 
 const settings = ref<Settings>({
   taskLanguage: "russian",
@@ -13,7 +14,6 @@ const settings = ref<Settings>({
 const { currentStep, taskText, solutionText, toNextStep } = useGame(settings);
 
 const changeSettings = (value: Settings) => {
-  console.log(value);
   settings.value = value;
 };
 </script>

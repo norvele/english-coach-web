@@ -1,4 +1,4 @@
-import { Tense, Pronoun, Sign, Verb, LanguageI, TaskI } from "../types";
+import { Tense, Pronoun, Sign, Verb, LanguageI, TaskI } from "../common";
 import { capitalize } from "../utils/capitalize";
 
 type PronounsMap = Record<Pronoun, string>;

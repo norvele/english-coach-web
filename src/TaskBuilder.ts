@@ -1,4 +1,4 @@
-import { Pronoun, Sign, TaskBuilderI, Tense, Verb } from "./types";
+import { Pronoun, Sign, TaskBuilderI, Tense, Verb } from "./common";
 import { getRandomFromArray } from "./utils/getRandomFromArray";
 import { Task } from "./Task";
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SelectOption } from "../types";
+import { SelectOption } from "../common";
 
 defineProps<{
   modelValue: string;

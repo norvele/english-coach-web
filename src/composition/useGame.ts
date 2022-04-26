@@ -1,27 +1,14 @@
-import { SystemLanguage } from "../languages/SystemLanguage";
-import { RussianLanguage } from "../languages/RussianLanguage";
-import { EnglishLanguage } from "../languages/EnglishLanguage";
-import { TaskBuilder } from "../TaskBuilder";
 import { computed, Ref, ref } from "vue";
-import { LanguageI, TaskI } from "../types";
-
-enum CurrentStep {
-  task = "task",
-  solution = "solution",
-}
-export const languages = ["system", "russian", "english"] as const;
-export type Language = typeof languages[number];
-export type Settings = {
-  taskLanguage: Language;
-  solutionLanguage: Language;
-};
+import { CurrentStep, Language, LanguageI, Settings, TaskI } from "../common";
+import { injectContainer } from "../container";
 
 export function useGame(settings: Ref<Settings>) {
-  const taskBuilder = new TaskBuilder();
+  const { taskBuilder, systemLanguage, englishLanguage, russianLanguage } =
+    injectContainer();
   const languagesMap: Record<Language, LanguageI> = {
-    system: new SystemLanguage(),
-    russian: new RussianLanguage(),
-    english: new EnglishLanguage(),
+    system: systemLanguage,
+    russian: russianLanguage,
+    english: englishLanguage,
   };
 
   const taskLanguage = computed(

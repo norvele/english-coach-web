@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { Settings, languages, Language } from "../composition/useGame";
+import { Settings, languages, Language } from "../common";
 import { computed } from "vue";
-import { SelectOption } from "../types";
+import { SelectOption } from "../common";
 import UiSelect from "./UiSelect.vue";
 
 const props = defineProps<{

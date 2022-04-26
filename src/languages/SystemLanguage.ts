@@ -1,4 +1,4 @@
-import { LanguageI, TaskI } from "../types";
+import { LanguageI, TaskI } from "../common";
 
 export class SystemLanguage implements LanguageI {
   getSolution(task: TaskI) {

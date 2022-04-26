@@ -45,3 +45,15 @@ export interface SelectOption {
   value: string;
   label: string;
 }
+
+export const languages = ["system", "russian", "english"] as const;
+export type Language = typeof languages[number];
+export type Settings = {
+  taskLanguage: Language;
+  solutionLanguage: Language;
+};
+
+export enum CurrentStep {
+  task = "task",
+  solution = "solution",
+}
