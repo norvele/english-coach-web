@@ -33,8 +33,12 @@ export interface TaskI {
   toString(): string;
 }
 
+export interface TaskBuilderSettings {
+  usedVerbs: Verb[];
+}
+
 export interface TaskBuilderI {
-  createRandomTask(): TaskI;
+  createRandomTask(settings: TaskBuilderSettings): TaskI;
 }
 
 export interface LanguageI {
@@ -51,6 +55,7 @@ export type Language = typeof languages[number];
 export type Settings = {
   taskLanguage: Language;
   solutionLanguage: Language;
+  usedVerbs: Verb[];
 };
 
 export enum CurrentStep {

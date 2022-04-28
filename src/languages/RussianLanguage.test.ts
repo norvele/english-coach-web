@@ -12,7 +12,7 @@ const testCases: LanguageTestCase[] = [
       sign: Sign.positive,
       verb: Verb.work,
     }),
-    solution: "Я работаю",
+    solution: "Я (обычно) работаю",
   },
   {
     task: new Task({
@@ -21,7 +21,7 @@ const testCases: LanguageTestCase[] = [
       sign: Sign.negative,
       verb: Verb.work,
     }),
-    solution: "Я не работаю",
+    solution: "Я (обычно) не работаю",
   },
   {
     task: new Task({
@@ -30,7 +30,7 @@ const testCases: LanguageTestCase[] = [
       sign: Sign.question,
       verb: Verb.work,
     }),
-    solution: "Я работаю?",
+    solution: "Я (обычно) работаю?",
   },
   {
     task: new Task({
@@ -39,7 +39,7 @@ const testCases: LanguageTestCase[] = [
       sign: Sign.positive,
       verb: Verb.work,
     }),
-    solution: "Ты работаешь",
+    solution: "Ты (обычно) работаешь",
   },
   {
     task: new Task({
@@ -48,7 +48,7 @@ const testCases: LanguageTestCase[] = [
       sign: Sign.negative,
       verb: Verb.work,
     }),
-    solution: "Ты не работаешь",
+    solution: "Ты (обычно) не работаешь",
   },
   {
     task: new Task({
@@ -57,7 +57,7 @@ const testCases: LanguageTestCase[] = [
       sign: Sign.question,
       verb: Verb.work,
     }),
-    solution: "Ты работаешь?",
+    solution: "Ты (обычно) работаешь?",
   },
   {
     task: new Task({
@@ -66,7 +66,7 @@ const testCases: LanguageTestCase[] = [
       sign: Sign.positive,
       verb: Verb.work,
     }),
-    solution: "Он работает",
+    solution: "Он (обычно) работает",
   },
   {
     task: new Task({
@@ -75,7 +75,7 @@ const testCases: LanguageTestCase[] = [
       sign: Sign.negative,
       verb: Verb.work,
     }),
-    solution: "Он не работает",
+    solution: "Он (обычно) не работает",
   },
   {
     task: new Task({
@@ -84,7 +84,7 @@ const testCases: LanguageTestCase[] = [
       sign: Sign.question,
       verb: Verb.work,
     }),
-    solution: "Он работает?",
+    solution: "Он (обычно) работает?",
   },
   // presentContinuous
   {
@@ -94,7 +94,7 @@ const testCases: LanguageTestCase[] = [
       sign: Sign.positive,
       verb: Verb.work,
     }),
-    solution: "Я сейчас работаю",
+    solution: "Я (сейчас) работаю",
   },
   {
     task: new Task({
@@ -103,7 +103,7 @@ const testCases: LanguageTestCase[] = [
       sign: Sign.negative,
       verb: Verb.work,
     }),
-    solution: "Я сейчас не работаю",
+    solution: "Я (сейчас) не работаю",
   },
   {
     task: new Task({
@@ -112,7 +112,7 @@ const testCases: LanguageTestCase[] = [
       sign: Sign.question,
       verb: Verb.work,
     }),
-    solution: "Я сейчас работаю?",
+    solution: "Я (сейчас) работаю?",
   },
   {
     task: new Task({
@@ -121,7 +121,7 @@ const testCases: LanguageTestCase[] = [
       sign: Sign.positive,
       verb: Verb.work,
     }),
-    solution: "Ты сейчас работаешь",
+    solution: "Ты (сейчас) работаешь",
   },
   {
     task: new Task({
@@ -130,7 +130,7 @@ const testCases: LanguageTestCase[] = [
       sign: Sign.negative,
       verb: Verb.work,
     }),
-    solution: "Ты сейчас не работаешь",
+    solution: "Ты (сейчас) не работаешь",
   },
   {
     task: new Task({
@@ -139,7 +139,7 @@ const testCases: LanguageTestCase[] = [
       sign: Sign.question,
       verb: Verb.work,
     }),
-    solution: "Ты сейчас работаешь?",
+    solution: "Ты (сейчас) работаешь?",
   },
   {
     task: new Task({
@@ -148,7 +148,7 @@ const testCases: LanguageTestCase[] = [
       sign: Sign.positive,
       verb: Verb.work,
     }),
-    solution: "Он сейчас работает",
+    solution: "Он (сейчас) работает",
   },
   {
     task: new Task({
@@ -157,7 +157,7 @@ const testCases: LanguageTestCase[] = [
       sign: Sign.negative,
       verb: Verb.work,
     }),
-    solution: "Он сейчас не работает",
+    solution: "Он (сейчас) не работает",
   },
   {
     task: new Task({
@@ -166,7 +166,7 @@ const testCases: LanguageTestCase[] = [
       sign: Sign.question,
       verb: Verb.work,
     }),
-    solution: "Он сейчас работает?",
+    solution: "Он (сейчас) работает?",
   },
   // futureSimple
   {

@@ -12,6 +12,7 @@ describe("useGame", () => {
     const settings = ref<Settings>({
       taskLanguage: "russian",
       solutionLanguage: "english",
+      usedVerbs: Object.values(Verb),
     });
     const TestComponent = defineComponent({
       setup() {
@@ -41,13 +42,13 @@ describe("useGame", () => {
     const vm = wrapper.vm as unknown as any;
 
     expect(vm.currentStep).toEqual(CurrentStep.task);
-    expect(vm.taskText).toEqual("Я работаю");
+    expect(vm.taskText).toEqual("Я (обычно) работаю");
     expect(vm.solutionText).toEqual("I work");
 
     vm.toNextStep();
 
     expect(vm.currentStep).toEqual(CurrentStep.solution);
-    expect(vm.taskText).toEqual("Я работаю");
+    expect(vm.taskText).toEqual("Я (обычно) работаю");
     expect(vm.solutionText).toEqual("I work");
 
     vm.toNextStep();

@@ -10,7 +10,7 @@ type VerbsMap = {
   };
 };
 
-const pronounsMap: Record<Pronoun, string> = {
+const pronounsMap: PronounsMap = {
   i: "я",
   you: "ты",
   we: "мы",
@@ -90,13 +90,13 @@ const verbsMap: VerbsMap = {
       it: "идет",
     },
     past: {
-      i: "шел",
-      you: "шел",
-      we: "шли",
-      they: "шли",
-      he: "шел",
-      she: "шла",
-      it: "шло",
+      i: "ходил",
+      you: "ходил",
+      we: "ходили",
+      they: "ходили",
+      he: "ходил",
+      she: "ходила",
+      it: "ходило",
     },
     future: {
       i: "пойду",
@@ -124,9 +124,8 @@ export class RussianLanguage implements LanguageI {
 
   protected getPresentSimpleSolution(task: TaskI, now = false) {
     const acc = [pronounsMap[task.pronoun]];
-    if (now) {
-      acc.push("сейчас");
-    }
+    const clarification = now ? "сейчас" : "обычно";
+    acc.push(`(${clarification})`);
     if (task.sign === Sign.negative) {
       acc.push("не");
     }

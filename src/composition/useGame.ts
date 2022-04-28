@@ -1,6 +1,18 @@
 import { computed, Ref, ref } from "vue";
-import { CurrentStep, Language, LanguageI, Settings, TaskI } from "../common";
+import {
+  CurrentStep,
+  Language,
+  LanguageI,
+  Settings,
+  TaskBuilderSettings,
+  TaskI,
+} from "../common";
 import { injectContainer } from "../container";
+import {
+  TaskBuilderError,
+  TaskBuilderErrorCode,
+} from "../errors/TaskBuilderError";
+import { GameError, GameErrorCode } from "../errors/GameError";
 
 export function useGame(settings: Ref<Settings>) {
   const { taskBuilder, systemLanguage, englishLanguage, russianLanguage } =
@@ -18,7 +30,13 @@ export function useGame(settings: Ref<Settings>) {
     () => languagesMap[settings.value.solutionLanguage]
   );
 
-  const currentTask = ref<TaskI>(taskBuilder.createRandomTask());
+  const taskBuilderSettings = computed<TaskBuilderSettings>(() => ({
+    usedVerbs: settings.value.usedVerbs,
+  }));
+
+  const currentTask = ref<TaskI>(
+    taskBuilder.createRandomTask(taskBuilderSettings.value)
+  );
   const currentStep = ref<CurrentStep>(CurrentStep.task);
 
   const taskText = computed(() =>
@@ -29,11 +47,26 @@ export function useGame(settings: Ref<Settings>) {
   );
 
   const toNextStep = () => {
-    if (currentStep.value === CurrentStep.solution) {
-      currentStep.value = CurrentStep.task;
-      currentTask.value = taskBuilder.createRandomTask();
-    } else {
-      currentStep.value = CurrentStep.solution;
+    try {
+      if (currentStep.value === CurrentStep.solution) {
+        currentTask.value = taskBuilder.createRandomTask(
+          taskBuilderSettings.value
+        );
+        currentStep.value = CurrentStep.task;
+      } else {
+        currentStep.value = CurrentStep.solution;
+      }
+    } catch (e) {
+      if (
+        e instanceof TaskBuilderError &&
+        e.code === TaskBuilderErrorCode.usedVerbsEmpty
+      ) {
+        throw new GameError(
+          "Verbs used are empty",
+          GameErrorCode.usedVerbsEmpty
+        );
+      }
+      throw e;
     }
   };
 
