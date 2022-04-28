@@ -1,5 +1,5 @@
 export enum Pronoun {
-  i = "i",
+  i = "I",
   you = "you",
   we = "we",
   they = "they",

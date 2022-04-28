@@ -11,7 +11,7 @@ type VerbsMap = {
 };
 
 const pronounsMap: PronounsMap = {
-  i: "я",
+  I: "я",
   you: "ты",
   we: "мы",
   they: "они",
@@ -23,7 +23,7 @@ const pronounsMap: PronounsMap = {
 const verbsMap: VerbsMap = {
   work: {
     present: {
-      i: "работаю",
+      I: "работаю",
       you: "работаешь",
       we: "работаем",
       they: "работают",
@@ -32,7 +32,7 @@ const verbsMap: VerbsMap = {
       it: "работает",
     },
     past: {
-      i: "работал",
+      I: "работал",
       you: "работал",
       we: "работали",
       they: "работали",
@@ -41,7 +41,7 @@ const verbsMap: VerbsMap = {
       it: "работало",
     },
     future: {
-      i: "буду работать",
+      I: "буду работать",
       you: "будешь работать",
       we: "будем работать",
       they: "будут работать",
@@ -52,7 +52,7 @@ const verbsMap: VerbsMap = {
   },
   study: {
     present: {
-      i: "обучаюсь",
+      I: "обучаюсь",
       you: "обучаешься",
       we: "обучаемся",
       they: "обучаются",
@@ -61,7 +61,7 @@ const verbsMap: VerbsMap = {
       it: "обучается",
     },
     past: {
-      i: "обучался",
+      I: "обучался",
       you: "обучался",
       we: "обучались",
       they: "обучались",
@@ -70,7 +70,7 @@ const verbsMap: VerbsMap = {
       it: "обучалось",
     },
     future: {
-      i: "буду обучаться",
+      I: "буду обучаться",
       you: "будешь обучаться",
       we: "будем обучаться",
       they: "будут обучаться",
@@ -81,7 +81,7 @@ const verbsMap: VerbsMap = {
   },
   go: {
     present: {
-      i: "иду",
+      I: "иду",
       you: "идешь",
       we: "идем",
       they: "идут",
@@ -90,7 +90,7 @@ const verbsMap: VerbsMap = {
       it: "идет",
     },
     past: {
-      i: "ходил",
+      I: "ходил",
       you: "ходил",
       we: "ходили",
       they: "ходили",
@@ -99,7 +99,7 @@ const verbsMap: VerbsMap = {
       it: "ходило",
     },
     future: {
-      i: "пойду",
+      I: "пойду",
       you: "пойдешь",
       we: "пойдем",
       they: "пойдут",

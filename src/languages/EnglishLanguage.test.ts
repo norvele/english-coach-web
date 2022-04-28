@@ -30,7 +30,7 @@ const testCases: LanguageTestCase[] = [
       sign: Sign.question,
       verb: Verb.work,
     }),
-    solution: "Do i work?",
+    solution: "Do I work?",
   },
   {
     task: new Task({
@@ -139,7 +139,7 @@ const testCases: LanguageTestCase[] = [
       sign: Sign.question,
       verb: Verb.work,
     }),
-    solution: "Am i working?",
+    solution: "Am I working?",
   },
   {
     task: new Task({
@@ -230,7 +230,7 @@ const testCases: LanguageTestCase[] = [
       sign: Sign.question,
       verb: Verb.work,
     }),
-    solution: "Will i work?",
+    solution: "Will I work?",
   },
   {
     task: new Task({
@@ -312,7 +312,7 @@ const testCases: LanguageTestCase[] = [
       sign: Sign.question,
       verb: Verb.work,
     }),
-    solution: "Did i work?",
+    solution: "Did I work?",
   },
   {
     task: new Task({
