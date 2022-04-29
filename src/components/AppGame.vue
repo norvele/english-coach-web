@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import UiButton from "./UiButton.vue";
-import UiDropdown from "./UiDropdown.vue";
-import AppSettings from "./AppSettings.vue";
-import { useGame } from "../composition/useGame";
+import UiButton from "@/components/UiButton.vue";
+import UiDropdown from "@/components/UiDropdown.vue";
+import AppSettings from "@/components/AppSettings.vue";
+import { useGame } from "@/composition/useGame";
 import { ref } from "vue";
-import { Settings, Verb } from "../common";
-import { GameError, GameErrorCode } from "../errors/GameError";
+import { Settings, Verb } from "@/common";
+import { GameError, GameErrorCode } from "@/errors/GameError";
 
 const settings = ref<Settings>({
   taskLanguage: "russian",

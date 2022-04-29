@@ -4,13 +4,13 @@ import {
   TaskBuilderI,
   TaskBuilderSettings,
   Tense,
-} from "./common";
-import { getRandomFromArray } from "./utils/getRandomFromArray";
-import { Task } from "./Task";
+} from "@/common";
+import { getRandomFromArray } from "@/utils/getRandomFromArray";
+import { Task } from "@/Task";
 import {
   TaskBuilderErrorCode,
   TaskBuilderError,
-} from "./errors/TaskBuilderError";
+} from "@/errors/TaskBuilderError";
 
 export class TaskBuilder implements TaskBuilderI {
   createRandomTask(settings: TaskBuilderSettings) {

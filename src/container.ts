@@ -1,7 +1,7 @@
-import { TaskBuilder } from "./TaskBuilder";
-import { EnglishLanguage } from "./languages/EnglishLanguage";
-import { RussianLanguage } from "./languages/RussianLanguage";
-import { SystemLanguage } from "./languages/SystemLanguage";
+import { TaskBuilder } from "@/TaskBuilder";
+import { EnglishLanguage } from "@/languages/EnglishLanguage";
+import { RussianLanguage } from "@/languages/RussianLanguage";
+import { SystemLanguage } from "@/languages/SystemLanguage";
 import { inject } from "vue";
 
 export interface ContainerI {

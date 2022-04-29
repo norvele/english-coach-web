@@ -6,13 +6,13 @@ import {
   Settings,
   TaskBuilderSettings,
   TaskI,
-} from "../common";
-import { injectContainer } from "../container";
+} from "@/common";
+import { injectContainer } from "@/container";
 import {
   TaskBuilderError,
   TaskBuilderErrorCode,
-} from "../errors/TaskBuilderError";
-import { GameError, GameErrorCode } from "../errors/GameError";
+} from "@/errors/TaskBuilderError";
+import { GameError, GameErrorCode } from "@/errors/GameError";
 
 export function useGame(settings: Ref<Settings>) {
   const { taskBuilder, systemLanguage, englishLanguage, russianLanguage } =

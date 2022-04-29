@@ -1,7 +1,7 @@
-import { LanguageTestCase } from "../testUtils/language";
-import { Task } from "../Task";
-import { Pronoun, Sign, Tense, Verb } from "../common";
-import { RussianLanguage } from "./RussianLanguage";
+import { LanguageTestCase } from "@/testUtils/language";
+import { Task } from "@/Task";
+import { Pronoun, Sign, Tense, Verb } from "@/common";
+import { RussianLanguage } from "@/languages/RussianLanguage";
 
 const testCases: LanguageTestCase[] = [
   // presentSimple

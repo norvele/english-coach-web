@@ -1,5 +1,5 @@
-import { Tense, Pronoun, Sign, Verb, LanguageI, TaskI } from "../common";
-import { capitalize } from "../utils/capitalize";
+import { Tense, Pronoun, Sign, Verb, LanguageI, TaskI } from "@/common";
+import { capitalize } from "@/utils/capitalize";
 
 const irregularVerbs: { [verb in Verb]?: [string, string, string] } = {
   go: ["go", "went", "gone"],

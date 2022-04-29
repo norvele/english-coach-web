@@ -1,4 +1,4 @@
-import { BaseError } from "./BaseError";
+import { BaseError } from "@/errors/BaseError";
 
 export enum TaskBuilderErrorCode {
   usedVerbsEmpty,

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Task } from "../../Task";
+import { Task } from "@/Task";
 
 defineProps<{
   task?: Task;

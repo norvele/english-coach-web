@@ -1,4 +1,4 @@
-import { TaskI } from "../common";
+import { TaskI } from "@/common";
 
 export interface LanguageTestCase {
   task: TaskI;

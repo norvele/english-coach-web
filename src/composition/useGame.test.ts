@@ -1,8 +1,8 @@
-import { ContainerI, containerKey, createContainer } from "../container";
-import { Task } from "../Task";
-import { CurrentStep, Pronoun, Settings, Sign, Tense, Verb } from "../common";
+import { ContainerI, containerKey, createContainer } from "@/container";
+import { Task } from "@/Task";
+import { CurrentStep, Pronoun, Settings, Sign, Tense, Verb } from "@/common";
 import { defineComponent, ref } from "vue";
-import { useGame } from "./useGame";
+import { useGame } from "@/composition/useGame";
 import { mount, VueWrapper } from "@vue/test-utils";
 
 let wrapper: VueWrapper;

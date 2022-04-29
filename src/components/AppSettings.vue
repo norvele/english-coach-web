@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { Settings, languages, Language, Verb } from "../common";
+import { Settings, languages, Language, Verb } from "@/common";
 import { computed } from "vue";
-import { SelectOption } from "../common";
-import UiSelect from "./UiSelect.vue";
-import UiCheckbox from "./UiCheckbox.vue";
+import { SelectOption } from "@/common";
+import UiSelect from "@/components/UiSelect.vue";
+import UiCheckbox from "@/components/UiCheckbox.vue";
 
 const props = defineProps<{
   settings: Settings;

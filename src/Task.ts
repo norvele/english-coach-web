@@ -1,4 +1,4 @@
-import { Pronoun, Sign, TaskI, Tense, Verb } from "./common";
+import { Pronoun, Sign, TaskI, Tense, Verb } from "@/common";
 
 type ConstructorData = {
   tense: Tense;

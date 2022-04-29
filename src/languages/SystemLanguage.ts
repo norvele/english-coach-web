@@ -1,4 +1,4 @@
-import { LanguageI, Pronoun, TaskI } from "../common";
+import { LanguageI, Pronoun, TaskI } from "@/common";
 
 export class SystemLanguage implements LanguageI {
   getSolution(task: TaskI) {

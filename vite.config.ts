@@ -1,6 +1,7 @@
 // import * as path from "path";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+import * as path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -9,13 +10,9 @@ export default defineConfig({
   build: {
     outDir: "docs",
   },
-  // resolve: {
-  //   alias: [
-  //     {
-  //       find: "@",
-  //       replacement: path.resolve(__dirname, "./src"),
-  //     },
-  //   ],
-  //   mainFields: ["main", "module"],
-  // },
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 });
